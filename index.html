@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio | Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navbar -->
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">Tan<span>im.</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero / Landing -->
+        <section id="hero">
+            <canvas id="particles"></canvas>
+            <div class="hero-content">
+                <div class="hero-copy">
+                    <div class="welcome-pill"><span>👋</span> Welcome to my portfolio</div>
+                    <h2 class="greeting">Hi, I'm</h2>
+                    <h1 class="name">Tanim Mahamud<span class="name-cursor"> </span></h1>
+                    <h3 class="typing-text">I am a <span class="typewriter"></span></h3>
+                    <p class="hero-description">I build modern, responsive and user-friendly websites with clean code and creative design. Passionate about turning ideas into real digital experiences.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn primary-btn"><i class="fas fa-rocket"></i> View My Work <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="btn secondary-btn"><i class="fas fa-download"></i> Download CV</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image"><img src="/image.png" alt="Tanim Mahmud profile picture"></div>
+                    <div class="availability"><span></span><strong>Available</strong><small>Let's work together</small></div>
+                    <div class="code-card"><span>const</span> developer = {<br>&nbsp;&nbsp;name: <b>"Tanim Mahamud"</b>,<br>&nbsp;&nbsp;role: <b>"Web Developer"</b>,<br>&nbsp;&nbsp;passion: <b>"Building Web"</b><br>};</div>
+                    <div class="tech-list"><span><i class="fab fa-html5"></i> HTML</span><span><i class="fab fa-css3-alt"></i> CSS</span><span><i class="fab fa-js"></i> JavaScript</span><span><i class="fab fa-react"></i> React</span></div><span><i class="fas fa-bolt"></i> Next.js</span>
+    <span><i class="fas fa-database"></i> MongoDB</span>
+                    <div class="social-list"><a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#contact" aria-label="Email"><i class="fas fa-envelope"></i></a></div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-indicator"><span>Scroll Down</span><i class="fas fa-chevron-down"></i></a>
+        </section>
+        <!-- Section 2: About Me -->
+        <section id="about" class="section-padding">
+            <div class="section-title">
+                <h2>About <span>Me</span></h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="img-placeholder">
+                        <img src="/image.png" alt="My Profile Picture" class="profile-pic">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>I am a passionate Web Developer with a strong focus on creating interactive and user-friendly web experiences. I love transforming complex problems into simple, beautiful, and intuitive designs.</p>
+                    
+                    <div class="skills-bars">
+                        <div class="skill">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Python</span>
+                            <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Django</span>
+                            <div class="progress-bar"><div class="progress" data-width="60%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Next.js</span>
+                            <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                        </div>
+
+                    </div>
+
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <h3 class="counter" data-target="50">0</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 class="counter" data-target="3">0</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 class="counter" data-target="20">0</h3>
+                            <p>Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- Section 3: Projects / Portfolio -->
+<section id="projects" class="section-padding">
+    <div class="section-title">
+        <h2>My <span>Projects</span></h2>
+    </div>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="app">App</button>
+    </div>
+    
+    <div class="projects-grid">
+        <!-- Card 1 -->
+        <div class="project-card" data-category="web">
+            <div class="card-img">
+                <img src="/image.png" alt="E-Commerce Website">
+            </div>
+            <div class="card-info">
+                <h3>E-Commerce Website</h3>
+                <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                <div class="card-links">
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="card-overlay">Modern E-Commerce platform with cart functionality.</div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="project-card" data-category="design">
+            <div class="card-img">
+                <img src="/image.png" alt="UI/UX Dashboard">
+            </div>
+            <div class="card-info">
+                <h3>UI/UX Dashboard</h3>
+                <div class="tags"><span>Figma</span><span>CSS</span></div>
+                <div class="card-links">
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="card-overlay">Admin dashboard UI design for a SaaS product.</div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="project-card" data-category="app">
+            <div class="card-img">
+                <img src="/image.png" alt="Weather App">
+            </div>
+            <div class="card-info">
+                <h3>Weather App</h3>
+                <div class="tags"><span>JS</span><span>API</span></div>
+                <div class="card-links">
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="card-overlay">Real-time weather application using OpenWeather API.</div>
+        </div>
+
+        <!-- Card 4 (New) -->
+        <div class="project-card" data-category="web">
+            <div class="card-img">
+                <img src="/image.png" alt="Portfolio Website">
+            </div>
+            <div class="card-info">
+                <h3>Portfolio Website</h3>
+                <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                <div class="card-links">
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="card-overlay">Personal interactive portfolio website.</div>
+        </div>
+
+        <!-- Card 5 (New) -->
+        <div class="project-card" data-category="design">
+            <div class="card-img">
+                <img src="/image.png" alt="Mobile App UI">
+            </div>
+            <div class="card-info">
+                <h3>Mobile App UI</h3>
+                <div class="tags"><span>Figma</span><span>Adobe XD</span></div>
+                <div class="card-links">
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="card-overlay">Modern UI design for a fitness tracking app.</div>
+        </div>
+
+        <!-- Card 6 (New) -->
+        <div class="project-card" data-category="app">
+            <div class="card-img">
+                <img src="/image.png" alt="Task Tracker App">
+            </div>
+            <div class="card-info">
+                <h3>Task Tracker App</h3>
+                <div class="tags"><span>React</span><span>Node.js</span></div>
+                <div class="card-links">
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="card-overlay">Full-stack task management application.</div>
+        </div>
+    </div>
+</section>
+
+        <!-- Section 4: Skills & Services -->
+        <section id="skills" class="section-padding">
+            <div class="services-heading">
+                <div class="services-kicker"><i class="fas fa-cube"></i> What I Do</div>
+                <div class="section-title">
+                    <h2>My <span>Services</span></h2>
+                </div>
+                <p>I build modern, responsive and user-friendly digital solutions<br>to help businesses grow and create better user experiences.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card service-cyan">
+                    <span class="service-number">01</span>
+                    <div class="service-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and highly performant websites with clean code and modern technologies.</p>
+                    <a href="#contact" class="service-link" aria-label="Learn about Web Development"><i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card service-purple">
+                    <span class="service-number">02</span>
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and stunning user interfaces that people love to use.</p>
+                    <a href="#contact" class="service-link" aria-label="Learn about UI UX Design"><i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card service-cyan">
+                    <span class="service-number">03</span>
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile App</h3>
+                    <p>Developing seamless mobile experiences for iOS and Android.</p>
+                    <a href="#contact" class="service-link" aria-label="Learn about Mobile App Development"><i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card service-purple">
+                    <span class="service-number">04</span>
+                    <div class="service-icon"><i class="fas fa-search"></i></div>
+                    <h3>SEO Optimization</h3>
+                    <p>Improving website ranking and visibility with data-driven strategies and best practices.</p>
+                    <a href="#contact" class="service-link" aria-label="Learn about SEO Optimization"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="services-footer"><span></span><i class="fas fa-circle"></i><span></span><b>Let's Build Something Great</b><span></span><i class="fas fa-circle"></i><span></span></div>
+        </section>
+
+        <!-- Section 5: Contact -->
+        <section id="contact" class="section-padding">
+            <div class="section-title">
+                <h2>Contact <span>Me</span></h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>hello@example.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+880 1234-567890</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Dhaka, Bangladesh</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn primary-btn submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <a href="#hero" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>
