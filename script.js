@@ -32,6 +32,11 @@ document.addEventListener('mousemove', (e) => {
 const navbar = document.getElementById('navbar');
 const scrollProgress = document.querySelector('.scroll-progress');
 const backToTopBtn = document.getElementById('back-to-top');
+const currentYear = document.getElementById('current-year');
+
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
 
 window.addEventListener('scroll', () => {
     // Navbar glass effect

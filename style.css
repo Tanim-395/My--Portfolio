@@ -372,45 +372,41 @@ a { text-decoration: none; color: inherit; }
 
 
 /* === Section 2: About Me === */
+#about { scroll-margin-top: 85px; }
+
 .about-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
 }
-
+/* About Image Container */
 .about-image {
     flex: 1;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; /* ছবিটিকে একদম বাম পাশে ঘেঁষে রাখার জন্য */
 }
 
 .img-placeholder {
-    width: 300px;
-    height: 360px;
-    border-radius: 0;
+    width: 420px;  /* ছবির চওড়া (width) আগের চেয়ে বড় করা হলো */
+    height: 520px; /* ছবির উচ্চতা (height) বড় করা হলো */
+    border-radius: 20px; 
     background: var(--card-bg);
-    border: 3px solid var(--primary);
-    box-shadow: 0 0 20px var(--accent-glow);
+    border: none; /* চারপাশের বেগুনি বর্ডার সম্পূর্ণ মুছে দেওয়া হলো */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* বর্ডার নেই তাই হালকা শ্যাডো রাখা হলো */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
-    color: var(--text-secondary);
-    transition: var(--transition);
     overflow: hidden;
+    transition: var(--transition);
 }
 
 .profile-pic {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.img-placeholder:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px var(--secondary);
-    border-color: var(--secondary);
+    height: 100%; 
+    object-fit: cover; /* ছবিটি যাতে না কাটে বা চ্যাপ্টা না হয় */
+    object-position: top center; /* ছবির উপরের অংশ অর্থাৎ ফোকাস ঠিক রাখার জন্য */
 }
 
 .about-text {
@@ -801,6 +797,59 @@ a { text-decoration: none; color: inherit; }
     display: flex; justify-content: center; align-items: center; gap: 10px;
 }
 
+/* === Footer === */
+.site-footer {
+    position: relative;
+    overflow: hidden;
+    padding: 72px 10% 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(145deg, rgba(18, 18, 42, 0.96), rgba(10, 10, 26, 0.98));
+}
+
+.footer-glow {
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    width: 520px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(0, 217, 245, 0.08);
+    filter: blur(50px);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.footer-container,
+.footer-bottom {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 1.2fr;
+    gap: 70px;
+    padding-bottom: 48px;
+}
+
+.footer-brand .logo { display: inline-block; margin-bottom: 16px; }
+.footer-brand p { max-width: 310px; color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; }
+.footer-status { display: flex; align-items: center; gap: 8px; margin-top: 20px; color: #a9f58b; font-size: 0.78rem; }
+.footer-status span { width: 8px; height: 8px; border-radius: 50%; background: #51f3a5; box-shadow: 0 0 10px #51f3a5; }
+.footer-container h3 { margin-bottom: 18px; color: var(--text-primary); font-size: 0.95rem; }
+.footer-links { display: flex; flex-direction: column; gap: 11px; }
+.footer-links a { width: fit-content; color: var(--text-secondary); font-size: 0.84rem; transition: var(--transition); }
+.footer-links a:hover { color: var(--secondary); transform: translateX(4px); }
+.footer-email { display: inline-flex; align-items: center; gap: 9px; color: var(--secondary); font-size: 0.84rem; overflow-wrap: anywhere; }
+.footer-email i { font-size: 0.72rem; }
+.footer-socials { display: flex; gap: 10px; margin-top: 22px; }
+.footer-socials a { width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid rgba(108, 99, 255, 0.55); border-radius: 50%; color: var(--text-primary); transition: var(--transition); }
+.footer-socials a:hover { color: var(--secondary); border-color: var(--secondary); transform: translateY(-3px); }
+.footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, 0.08); color: #777793; font-size: 0.72rem; }
+.footer-bottom i { color: #ff6b9d; margin: 0 3px; }
+
 /* === Back to Top Button === */
 #back-to-top {
     position: fixed;
@@ -839,7 +888,8 @@ a { text-decoration: none; color: inherit; }
         flex-direction: column;
     }
     .img-placeholder {
-        width: 250px; height: 300px;
+        width: min(300px, 100%);
+        height: auto;
     }
 }
 
@@ -893,4 +943,9 @@ a { text-decoration: none; color: inherit; }
     .services-heading .section-title h2 { font-size: 2.4rem; }
     .services-heading p br { display: none; }
     .services-footer { padding: 0 5%; }
+
+    .site-footer { padding: 55px 8% 22px; }
+    .footer-container { grid-template-columns: 1fr 1fr; gap: 35px 25px; padding-bottom: 35px; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-bottom { flex-direction: column; gap: 8px; }
 }
