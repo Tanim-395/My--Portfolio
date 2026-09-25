@@ -382,31 +382,41 @@ a { text-decoration: none; color: inherit; }
 }
 /* About Image Container */
 .about-image {
-    flex: 1;
+    flex: 0 0 280px;
     display: flex;
-    justify-content: flex-start; /* ছবিটিকে একদম বাম পাশে ঘেঁষে রাখার জন্য */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.about-image {
+    flex: 0 0 280px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
+
 .img-placeholder {
-    width: 420px;  /* ছবির চওড়া (width) আগের চেয়ে বড় করা হলো */
-    height: 520px; /* ছবির উচ্চতা (height) বড় করা হলো */
-    border-radius: 20px; 
+    width: 280px;
+    height: auto;
+    max-height: calc(100vh - 140px);
+    border-radius: 20px;
     background: var(--card-bg);
-    border: none; /* চারপাশের বেগুনি বর্ডার সম্পূর্ণ মুছে দেওয়া হলো */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* বর্ডার নেই তাই হালকা শ্যাডো রাখা হলো */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+
+    display: block;
     overflow: hidden;
-    transition: var(--transition);
 }
 
 .profile-pic {
     display: block;
     width: 100%;
-    height: 100%; 
-    object-fit: cover; /* ছবিটি যাতে না কাটে বা চ্যাপ্টা না হয় */
-    object-position: top center; /* ছবির উপরের অংশ অর্থাৎ ফোকাস ঠিক রাখার জন্য */
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 140px);
+    object-fit: contain;
+    object-position: top center;
+    border-radius: 0px;
 }
 
 .about-text {
@@ -416,7 +426,7 @@ a { text-decoration: none; color: inherit; }
 .about-text p {
     color: var(--text-secondary);
     line-height: 1.8;
-    margin-bottom: 30px;
+    margin-bottom:0px;
 }
 
 /* Skills Progress Bars */
