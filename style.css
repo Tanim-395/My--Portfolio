@@ -260,7 +260,7 @@ a { text-decoration: none; color: inherit; }
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .hero-image {
@@ -377,7 +377,7 @@ a { text-decoration: none; color: inherit; }
 .about-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 50px;
 }
 /* About Image Container */
@@ -386,14 +386,8 @@ a { text-decoration: none; color: inherit; }
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top: 0;
 }
-.about-image {
-    flex: 0 0 280px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
 
 .img-placeholder {
     width: 280px;
@@ -403,7 +397,7 @@ a { text-decoration: none; color: inherit; }
     background: var(--card-bg);
     border: none;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
-
+    margin-top: 0;
     display: block;
     overflow: hidden;
 }
@@ -414,8 +408,8 @@ a { text-decoration: none; color: inherit; }
     height: auto;
     max-width: 100%;
     max-height: calc(100vh - 140px);
-    object-fit: contain;
-    object-position: top center;
+    object-fit: cover;
+    object-position: center top;
     border-radius: 0px;
 }
 
